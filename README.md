@@ -10,9 +10,11 @@ GroupMe bot built with NodeJS that sends a daily message if there is a St. Louis
 * The program reads comma seperated values from Schedule.csv
   Since I am a St. Louis Blues fan, this file currently only has St. Louis Blues games
 * I have included 2016_2017_NHL_Schedule.csv which contains every NHL game this season
-* From the command line
-    rm Schedule.csv
-    grep 'Your Team Name Here' 2016_2017_NHL_Schedule.csv >> Schedule.csv
+* From the command line:
+
+    `rm Schedule.csv`
+
+    `grep 'Your Team Name Here' 2016_2017_NHL_Schedule.csv >> Schedule.csv`
 * This removes the old schedule file, and creates a new schedule file
 * ***!IMPORTANT: 
   The final step is to open your new Schedule.csv file in your favorite text editor,
