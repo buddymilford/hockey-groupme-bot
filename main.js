@@ -6,12 +6,6 @@ var schedule = require('node-schedule')
 var request = require('request')
 var emoji = require('node-emoji')
 
-// object to set schedule to recur at 8:15 AM every day
-// (uses node-schedule)
-var rule = new schedule.RecurrenceRule();
-rule.hour = 8;
-rule.minute = 15;
-
 // function that tells the bot to send a message
 // parameters: Away team, Home team, and Game time.
 function sendMessage(away, home, time) {
@@ -37,7 +31,8 @@ function sendMessage(away, home, time) {
 	})
 }
  
-var j = schedule.scheduleJob(rule, function(){
+// Schedule set to 8:15 AM
+var j = schedule.scheduleJob({hour: 8, minute: 15}, function(){
   var todaysDate = format.asString('yyyy-MM-dd' ,new Date())
   fs.createReadStream('Schedule.csv')
     .pipe(csv())
