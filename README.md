@@ -32,7 +32,7 @@ GroupMe bot built with NodeJS that sends a daily message if there is a St. Louis
   (obviously you must have node installed)
 
 Customization:
-* You may need to change the TIME column (specifically the hour) depending on your time zone
+* You may need to change the TIME column of **Schedule.csv** (specifically the hour) depending on your time zone
 * Feel free to change the time of node-schedule's reccurrence
 
   https://www.npmjs.com/package/node-schedule
