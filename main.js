@@ -35,7 +35,7 @@ function sendMessage(away, home, time) {
 //   Creates todays date and compares it against the csv file.
 //   If there is a match, run the sendMessage function 
 var todaysDate = format.asString('yyyy-MM-dd' ,new Date())
-fs.createReadStream('Schedule.csv')
+fs.createReadStream('hockey-groupme-bot/Schedule.csv')
   .pipe(csv())
   .on('data', function (data){ 
     if (data.DATE == todaysDate){
