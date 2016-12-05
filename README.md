@@ -26,17 +26,12 @@ GroupMe bot built with NodeJS that sends a daily message if there is a St. Louis
 * Your **Schedule.csv** file with your favorite hockey team is now compatible with the JavaScript
 
 ## Running the program: ##
-  
-   `node main.js`
 
-  (obviously you must have node installed)
+* My program is running through crontab on my raspberry pi. It runs the program every day at 9:15AM. 
+  For info on how to set up crontab, follow this link: https://www.raspberrypi.org/documentation/linux/usage/cron.md
 
 Customization:
 * You may need to change the TIME column of **Schedule.csv** (specifically the hour) depending on your time zone
-* Feel free to change the time of node-schedule's reccurrence
-
-  https://www.npmjs.com/package/node-schedule
-
 * The message sent to the group can say whatever you want it to.
 * node-emoji isn't necessary, I just added it for flair
 
