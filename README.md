@@ -5,6 +5,7 @@ GroupMe bot built with NodeJS that sends a daily message if there is a St. Louis
 * After creating a GroupMe account, go to https://dev.groupme.com/session/new
 * Click 'Create Bot'
 * Select the Group it will 'live' in, and give it a name. (Feel free to add a photo for the bot's avatar. A callback URL isn't necessary for this bot, so leave that input field blank).
+* Replace the bot_id on line 15 of **main.js** with your bot's unique ID
 
 ## Changing Teams: ##
 * The program reads comma seperated values from **Schedule.csv**
@@ -18,7 +19,7 @@ GroupMe bot built with NodeJS that sends a daily message if there is a St. Louis
     `grep 'Your Team Name Here' 2016_2017_NHL_Schedule.csv >> Schedule.csv`
 * This removes the old schedule file, and creates a new schedule file
 * **IMPORTANT! :** 
-  The final step is to open your new Schedule.csv file in your favorite text editor,
+  The final step is to open your new **Schedule.csv** file in your favorite text editor,
   Insert this in a new line at the very top: 
     
     `DATE,TIME,AWAY,HOME`
@@ -31,7 +32,7 @@ GroupMe bot built with NodeJS that sends a daily message if there is a St. Louis
   (obviously you must have node installed)
 
 Customization:
-* You may need to change the TIME column (specifically the hour) depending on your time zone
+* You may need to change the TIME column of **Schedule.csv** (specifically the hour) depending on your time zone
 * Feel free to change the time of node-schedule's reccurrence
 
   https://www.npmjs.com/package/node-schedule
