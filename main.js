@@ -2,12 +2,12 @@
 var csv = require('csv-parser')
 var fs = require('fs')
 var format = require('date-format')
-var schedule = require('node-schedule')
 var request = require('request')
 var emoji = require('node-emoji')
 
-// function that tells the bot to send a message
+// sendMessage function:
 // parameters: Away team, Home team, and Game time.
+//   tells the bot to send a message
 function sendMessage(away, home, time) {
   var options = {
     url: 'https://api.groupme.com/v3/bots/post',
@@ -30,15 +30,15 @@ function sendMessage(away, home, time) {
 	  }
 	})
 }
- 
-// Schedule set to 8:15 AM
-var j = schedule.scheduleJob({hour: 8, minute: 15}, function(){
-  var todaysDate = format.asString('yyyy-MM-dd' ,new Date())
-  fs.createReadStream('Schedule.csv')
-    .pipe(csv())
-    .on('data', function (data){ 
-      if (data.DATE == todaysDate){
-	    sendMessage(data.AWAY, data.HOME, data.TIME);
-      }
-    })
+
+// main function:
+//   Creates todays date and compares it against the csv file.
+//   If there is a match, run the sendMessage function 
+var todaysDate = format.asString('yyyy-MM-dd' ,new Date())
+fs.createReadStream('Schedule.csv')
+  .pipe(csv())
+  .on('data', function (data){ 
+    if (data.DATE == todaysDate){
+		sendMessage(data.AWAY, data.HOME, data.TIME);
+    }
 })
