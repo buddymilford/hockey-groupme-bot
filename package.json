@@ -1,0 +1,27 @@
+{
+  "name": "hockey-groupme-bot",
+  "version": "1.0.0",
+  "description": "GroupMe bot built with NodeJS that sends a daily message if there is a hockey game",
+  "main": "main.js",
+  "dependencies": {
+    "csv-parser": "^1.11.0",
+    "date-format": "^0.0.2",
+    "fs": "^0.0.1-security",
+    "node-emoji": "^1.4.1",
+    "request": "^2.78.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buddymilford/hockey-groupme-bot.git"
+  },
+  "author": "Buddy Milford <buddy@supportcloud.net> (buddymilford.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buddymilford/hockey-groupme-bot/issues"
+  },
+  "homepage": "https://github.com/buddymilford/hockey-groupme-bot#readme"
+}
